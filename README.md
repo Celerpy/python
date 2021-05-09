@@ -1,7 +1,72 @@
 # python
 
-I wanted to show my result number in - 3 divideds by comma -  ,
-eg; 2300400 => 2,300,400
-while i coudnt find a way to do that, i wrote this simple code to get along with this issue...
+#I wanted to show my result number in - 3 divideds by comma -  ,eg; 2300400 => 2,300,400. while i coudnt find a way to do that, i wrote this simple code to get along with this issue... however i appreciate it if there is an easier specific sollusion for that...
 
-however i appreciate it if there is an easier specific sollusion for that...
+
+
+def Three_Divider(a):
+    a = list(str(int(a)))
+    b = a[-3::1]
+    c = a[-6:-3:1]
+    d = a[-9:-6:1]
+    e = a[-12:-9:1]
+    f = a[-15:-12:1]
+
+    if len(f) == 3:
+        return (
+            f"it will be:  {f[0] + f[1] + f[2]},{e[0] + e[1] + e[2]},{d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(f) == 2:
+        return (
+            f"it will be:  {f[0] + f[1]},{e[0] + e[1] + e[2]},{d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(f) == 1:
+        return (
+            f"it will be:  {f[0]},{e[0] + e[1] + e[2]},{d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+
+
+    elif len(e) == 3:
+        return (f"it will be:  {e[0] + e[1] + e[2]},{d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(e) == 2:
+        return (f"it will be:  {e[0] + e[1]},{d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(e) == 1:
+        return (f"it will be:  {e[0]},{d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+
+    elif len(d) == 3:
+        return (f"it will be:  {d[0] + d[1] + d[2]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(d) == 2:
+        return (f"it will be:  {d[0] + d[1]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(d) == 1:
+        return (f"it will be:  {d[0]},{c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+
+    elif len(c) == 3:
+        return (f"it will be:  {c[0] + c[1] + c[2]},{b[0] + b[1] + b[2]}")
+    elif len(c) == 2:
+        return (f"it will be:  {c[0] + c[1]},{b[0] + b[1] + b[2]}")
+    elif len(c) == 1:
+        return (f"it will be:  {c[0]},{b[0] + b[1] + b[2]}")
+
+    elif len(b) == 3:
+        return (f"it will be:  {b[0] + b[1] + b[2]}")
+    elif len(b) == 2:
+        return (f"it will be:  {b[0] + b[1]}")
+    elif len(b) == 1:
+        return (f"it will be:  {b[0]}")
+
+    else:
+        return (a)
+
+
+
+
+def Main():
+    while True:
+        Q = int(input("Please insert the number"))
+        print(Three_Divider(Q))
+        print("============================================")
+
+
+Main()
+
+
+
+
+
