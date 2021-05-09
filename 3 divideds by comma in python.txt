@@ -45,7 +45,7 @@ def Three_Divider(a):
 
 def Main():
     while True:
-        Q = int(input("Please insert the number"))
+        Q = int(input("Please insert the number: "))
         print(Three_Divider(Q))
         print("============================================")
 
