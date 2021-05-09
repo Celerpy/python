@@ -1,4 +1,4 @@
-# python
+# python 
 #this code is made for 15 digit numbers at max. if you have more digits, add the codes as the same way...
 
 def Three_Divider(a):
